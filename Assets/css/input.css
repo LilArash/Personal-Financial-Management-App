@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: vazir;
+    src: url(../fonts/Vazirmatn[wght].ttf);
+}
+
+@layer base {
+    body {
+        @apply font-vazir;
+    }
+}
+
+@layer components {
+    .button-styles {
+       @apply bg-mint p-2 md:p-4 rounded-full text-center flex items-center hover:-translate-y-1 transition-transform transform-gpu
+    }
+    .nav-item-styles {
+       @apply flex items-center gap-1 px-4 py-2 text-gray-300 hover:bg-gray-700 hover:text-white
+    }
+  
+}
+@layer components {
+    .input-styles {
+        @apply bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-3 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500
+    }
+}

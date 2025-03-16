@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Assets/css/output.css">
+    <title>افزودن شخص - حثابداری</title>
+</head>
+
+<body class="bg-slate-100 text-coal dark:bg-dark-coal dark:text-slate-100">
+    <div class="flex z-50 relative">
+        <div
+            class="relative flex flex-row- items-center justify-between w-full h-16 px-4 lg:h-24 lg:container  lg:px-16 gap-x-6">
+
+            <div class="flex gap-1">
+                <img class="inline-block size-8 cursor-pointer" id="menuButton" src="./Assets/images/icons/menuIcon.svg"
+                    alt="menuIcon-bars" />
+                <h2 class="text-2xl mb-2 font-semibold">شخص جدید</h2>
+            </div>
+
+            <div class="flex flex-row">
+                <div class="flex flex-row-reverse md:gap-3 gap-2">
+                    <div class="bg-mint rounded-lg p-1 md:p-2 flex justify-center items-center size-12"">
+                        <img class=" w-6 md:w-10" src="./Assets/images/icons/user.png" alt="profle-img">
+                    </div>
+
+                    <!-- وقتی طرف لاگین نیست بجا بالایی اینو باید نمایش بدی -->
+                    <!-- <div class="flex flex-row md:gap-3 gap-2">
+                        <a class="bg-mint px-4 py-2 rounded-lg w-16 h-12 text-center" href="">ورود</a>
+                        <a class="bg-mint px-4 py-2 rounded-lg w-24 h-12 text-center" href="">ثبت نام</a>
+                    </div> -->
+                    <div class="bg-mint rounded-lg p-1 md:p-2 flex justify-center items-center size-12 dark-mode-togg">
+                        <img class="w-6 md:w-10 dark-mode-pic" src="./Assets/images/icons/moon.png" alt="dark-mode-togg">
+                    </div>
+                </div>
+
+
+
+
+            </div>
+            <!-- side menu -->
+            <div id="sideBar"
+                class="fixed inset-y-0 right-[-515px] transform -translate-x-full transition-transform duration-300 ease-in-out bg-mint  text-white w-64">
+                <div class="flex items-center justify-between h-16 bg-coal px-4">
+                    <h1 class="text-2xl font-semibold">شخص جدید</h1>
+                    <button id="closeButton" class="focus:outline-none">
+                        <img src="./Assets/images/icons/closeIcon.svg" alt="close-icon" class="size-5 ">
+                    </button>
+                </div>
+                <nav class="mt-10">
+                    <a href="./index.html"
+                        class="flex items-center gap-1 px-4 py-2 text-dark-coal hover:bg-coal hover:text-white">
+                        <img src="./Assets/images/icons/dashboard.png" alt="dashboard-icon">
+                        <span>داشبورد</span>
+                    </a>
+                    <a href="#"
+                        class="flex items-center gap-1 px-4 py-2 text-dark-coal hover:bg-coal hover:text-white">
+                        <img class="size-5" src="./Assets/images/icons/user.svg" alt="user-icon">
+                        <span>ناحیه کاربری</span>
+                    </a>
+                    <a href="./people.html"
+                        class="flex items-center gap-1 px-4 py-2 text-dark-coal hover:bg-coal hover:text-white">
+                        <img class="size-5" src="./Assets/images/icons/users.svg" alt="users-icon">
+                        <span>فهرست افراد</span>
+                    </a>
+                    <a href="./transactions.html"
+                        class="flex items-center gap-1 px-4 py-2 text-dark-coal hover:bg-coal hover:text-white">
+                        <img class="size-5" src="./Assets/images/icons/transaction.svg" alt="transaction-icon">
+                        <span>فهزست تراکنش‌ها</span>
+                    </a>
+                    <a href="./debts.html"
+                        class="flex items-center gap-1 px-4 py-2 text-dark-coal hover:bg-coal hover:text-white">
+                        <img class="size-5" src="./Assets/images/icons/bill.svg" alt="money-icon">
+                        <span>فهرست بدهی‌ها</span>
+                    </a>
+                    <a href="./talabs.html"
+                        class="flex items-center gap-1 px-4 py-2 text-dark-coal hover:bg-coal hover:text-white">
+                        <img class="size-5" src="./Assets/images/icons/bill.svg" alt="money-icon">
+                        <span>فهرست طلب‌ها</span>
+                    </a>
+                    <a href="#"
+                        class="flex items-center gap-1 px-4 py-2 text-dark-coal hover:bg-coal hover:text-white">
+                        <img class="size-5" src="./Assets/images/icons/logout.svg" alt="logout-icon">
+                        <span>خروج</span>
+                    </a>
+                </nav>
+            </div>
+
+        </div>
+    </div>
+    <!-- main -->
+    <main class=" w-full px-4 mt-8 lg:container lg:px-16 gap-x-6">
+        <h2 class="text-2xl font-bold ml-4">اطلاعات شخص</h2>
+        <section class="w-full flex justify-center my-12">
+            <form class="flex flex-col items-center w-full md:w-3/4">
+                <div class="flex flex-col md:flex-row md:justify-between items-center w-full gap-8">
+                    <div class="w-full">
+                        <div >
+                            <label for="first_name"
+                                class="block mb-2 text-sm font-medium dark:text-white">نام</label>
+                            <input type="text" id="first_name" class="input-styles focus:outline-none" placeholder="نام شخص" required />
+                        </div>
+                        <div class="mt-6">
+
+                            <label class="block mb-2 text-sm font-medium dark:text-white"
+                                for="tel_no">شماره تماس</label>
+                            <input
+                                placeholder="09XXXXXXXX"
+                                class="block w-full p-2.5 text-sm border  border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
+                                id="tel_no" type="tel">
+
+                        </div>
+                    </div>
+                    <div class="w-full">
+                        <div >
+                            <label for="email"
+                                class="block mb-2 text-sm font-medium dark:text-white">ایمیل</label>
+                            <input type="email" id="email" class="input-styles focus:outline-none" placeholder="ایمیل شخص" required />
+                        </div>
+                        <div class="mt-6">
+
+                            <label class="block mb-2 text-sm font-medium dark:text-white"
+                                for="file_input">انتخاب عکس</label>
+                            <div class="dark:bg-gray-700 flex items-center w-full border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400">
+                              
+                                <input
+                                class="block w-full p-2.5 text-sm focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 "
+                                id="file_input" type="file">
+                                <img class="size-8 m-2" src="./Assets/images/icons/user.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-center md:justify-end w-full mt-6">
+                    <button 
+                        class="lg:w-[48.5%] w-full focus:outline-none text-coal bg-mint hover:bg-light-mint focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800" 
+                        type="submit"
+                        >اعمال
+                    </button>
+                </div>
+            </form>
+
+        </section>
+
+    </main>
+
+    <script src="./Assets/js/headerScripts.js"></script>
+</body>
+
+</html>
