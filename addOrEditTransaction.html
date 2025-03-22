@@ -22,9 +22,9 @@
 
             <div class="flex flex-row">
                 <div class="flex flex-row-reverse md:gap-3 gap-2">
-                    <div class="bg-mint rounded-lg p-1 md:p-2 flex justify-center items-center size-12"">
+                    <a class="bg-mint rounded-lg p-1 md:p-2 flex justify-center items-center size-12"">
                         <img class=" w-6 md:w-10" src="./Assets/images/icons/user.png" alt="profle-img">
-                    </div>
+                    </a>
 
                     <!-- وقتی طرف لاگین نیست بجا بالایی اینو باید نمایش بدی -->
                     <!-- <div class="flex flex-row md:gap-3 gap-2">
@@ -55,7 +55,7 @@
                         <img src="./Assets/images/icons/dashboard.png" alt="dashboard-icon">
                         <span>داشبورد</span>
                     </a>
-                    <a href="#"
+                    <a href="./userArea.html"
                         class="flex items-center gap-1 px-4 py-2 text-dark-coal hover:bg-coal hover:text-white">
                         <img class="size-5" src="./Assets/images/icons/user.svg" alt="user-icon">
                         <span>ناحیه کاربری</span>
@@ -68,7 +68,7 @@
                     <a href="./transactions.html"
                         class="flex items-center gap-1 px-4 py-2 text-dark-coal hover:bg-coal hover:text-white">
                         <img class="size-5" src="./Assets/images/icons/transaction.svg" alt="transaction-icon">
-                        <span>فهزست تراکنش‌ها</span>
+                        <span>فهرست تراکنش‌ها</span>
                     </a>
                     <a href="./debts.html"
                         class="flex items-center gap-1 px-4 py-2 text-dark-coal hover:bg-coal hover:text-white">
@@ -100,7 +100,8 @@
                         <div >
                             <label for="date"
                                 class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">تاریخ</label>
-                            <input type="date" id="date" class="input-styles focus:outline-none" placeholder="" required />
+                            <input type="date" id="date" class="input-styles focus:outline-none" placeholder=""  />
+                            <p class="text-red-500 text-sm"></p>
                         </div>
                         <div class="mt-6">
 
@@ -110,6 +111,7 @@
                                 placeholder="مبلغ"
                                 class="block w-full p-2.5 text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
                                 id="price" type="number">
+                                <p class="text-red-500 text-sm"></p>
 
                         </div>
                     </div>
@@ -117,7 +119,8 @@
                         <div >
                             <label
                                 class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">توضیحات</label>
-                            <textarea class="input-styles  focus:outline-none" placeholder="توضیحات تراکنش..." required ></textarea>
+                            <textarea class="input-styles  focus:outline-none" placeholder="توضیحات تراکنش..." ></textarea>
+                            <p class="text-red-500 text-sm"></p>
                         </div>
                         <div class="mt-6">
                             <div class="flex justify-center flex-col items-center w-full ">

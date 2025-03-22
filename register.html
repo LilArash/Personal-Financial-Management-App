@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html class="" dir="rtl" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./Assets/images/icons/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./Assets/css/output.css">
+    <title>ثبت نام</title>
+</head>
+
+<body class="bg-slate-100 text-coal dark:bg-dark-coal dark:text-slate-100">
+    <div class="w-full">
+        <div class="flex justify-center items-center">
+            <form class="m-4 p-4 w-3/4" action="">
+                <div class="flex flex-col justify-center items-center">
+                    <div>
+                        <h2 class="text-center text-4xl">ثبت نام</h2>
+                        <p class="text-center">اکانت داری؟ <a class="text-mint underline" href="login.html">ورود</a></p>
+                    </div>
+                    <div class="mt-10 w-full md:w-3/4 lg:w-1/2">
+                        <div class="w-full ">
+                            <label for="user_name" class="block mb-2 text-sm font-medium dark:text-white">نام
+                                کاربری</label>
+                            <input type="text" id="user_name" class="input-styles focus:outline-none"
+                                placeholder="نام کاربری"  />
+                                <p class="text-red-500 text-sm"></p>
+                        </div>
+                        <div class="w-full mt-6">
+                            <label for="email" class="block mb-2 text-sm font-medium dark:text-white">ایمیل</label>
+                            <input type="email" id="email" class="input-styles focus:outline-none" placeholder="ایمیل"
+                                 />
+                                 <p class="text-red-500 text-sm"></p>
+                        </div>
+                        <div class="w-full mt-6">
+                            <label for="tel_no" class="block mb-2 text-sm font-medium dark:text-white">شماره
+                                تماس</label>
+                            <input type="tel" id="tel_no" class="input-styles focus:outline-none"
+                                placeholder="09XXXXXXXX"  />
+                                <p class="text-red-500 text-sm"></p>
+                        </div>
+                        <div class="w-full mt-6">
+                            <label for="pass" class="block mb-2 text-sm font-medium dark:text-white">گذرواژه</label>
+                            <div class="flex justify-between items-center input-styles">
+                                <input type="password" id="pass"
+                                    class="pass-input w-full bg-gray-50 dark:bg-gray-700 focus:outline-none"
+                                    placeholder="گذواژه"  />
+                                <img class="size-5 eye" src="./Assets/images/icons/eye.svg" alt="togg-password" data-target="pass">
+                            </div>
+                            <p class="text-red-500 text-sm"></p>
+                        </div>
+                        <div class="w-full mt-6">
+                            <label for="confirm_pass" class="block mb-2 text-sm font-medium dark:text-white">تایید
+                                گذرواژه</label>
+                            <div class="flex justify-between items-center input-styles">
+                                <input type="password" id="confirm_pass"
+                                    class="pass-input w-full bg-gray-50 dark:bg-gray-700 focus:outline-none"
+                                    placeholder="تایید گذرواژه"  />
+                                <img class="size-5 eye" src="./Assets/images/icons/eye.svg" alt="togg-password" data-target="confirm_pass">
+                            </div>
+                            <p class="text-red-500 text-sm"></p>
+                        </div>
+                        <button
+                            class="w-full mt-6 focus:outline-none text-coal bg-mint hover:bg-light-mint focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800"
+                            type="submit">
+                            ثبت نام
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="./Assets/js/showPass.js"></script>
+    <script>
+        const inputs = document.querySelectorAll('input');
+        const formElm = document.querySelector('form');
+        const errTxts = document.querySelectorAll('p');
+        // formElm.addEventListener('submit', (e) => {
+        //     e.preventDefault();
+        //     inputs.forEach((input) => {
+        //         if(!input) {
+        //             errTxts.forEach((errTxt) => {
+        //                 errTxt.style.display = 'block';
+        //             })
+        //         } else {
+        //             //errTxt.style.display = 'none';
+        //             formElm.submit();
+        //         }
+        //     });
+            
+        // }); 
+
+    </script>
+</body>
+
+</html>
